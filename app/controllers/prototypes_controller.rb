@@ -54,7 +54,7 @@ private
   def move_to_index
     resource = Prototype.find(params[:id])
     unless resource.user.id == current_user.id
-      redirect_to
+      redirect_to action: :index
     end
   end
 
